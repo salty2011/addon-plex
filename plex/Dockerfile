@@ -24,7 +24,7 @@ RUN \
     && if [ "${BUILD_ARCH}" = "i386" ]; then ARCH="x86"; fi \
     \
     && curl -J -L -o /tmp/plexmediaserver.tgz \
-        "https://downloads.plex.tv/plex-media-server-new/1.21.3.4046-3c1c83ba4/synology/PlexMediaServer-1.21.3.4046-3c1c83ba4-${ARCH}.spk" \
+        "https://downloads.plex.tv/plex-media-server-new/1.25.6.5545-c8bd13540/synology/PlexMediaServer-1.25.6.5545-c8bd13540-${ARCH}.spk" \
     \
     && mkdir /usr/lib/plexmediaserver \
     && tar -xOf /tmp/plexmediaserver.tgz package.tgz | tar -xzf - -C /usr/lib/plexmediaserver/ \
@@ -58,11 +58,11 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Franck Nijhof <frenck@addons.community>" \
+    maintainer="Michael <github.h9jy3@simplelogin.co>" \
     org.opencontainers.image.title="Plex Media Server" \
     org.opencontainers.image.description="Recorded media, live TV, online news, and podcasts ready to stream" \
     org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
+    org.opencontainers.image.authors="Michael <github.h9jy3@simplelogin.co>" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://addons.community" \
     org.opencontainers.image.source="https://github.com/hassio-addons/addon-plex" \
