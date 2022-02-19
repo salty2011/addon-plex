@@ -24,7 +24,7 @@ RUN \
     && if [ "${BUILD_ARCH}" = "i386" ]; then ARCH="x86"; fi \
     \
     && curl -J -L -o /tmp/plexmediaserver.tgz \
-        "https://downloads.plex.tv/plex-media-server-new/1.25.6.5545-c8bd13540/synology/PlexMediaServer-1.25.6.5545-c8bd13540-x86_64_DSM6.spk" \
+        "https://downloads.plex.tv/plex-media-server-new/1.25.6.5545-c8bd13540/synology/PlexMediaServer-1.25.6.5545-c8bd13540-${ARCH}_DSM6.spk" \
     \
     && mkdir /usr/lib/plexmediaserver \
     && tar -xOf /tmp/plexmediaserver.tgz package.tgz | tar -xzf - -C /usr/lib/plexmediaserver/ \
@@ -38,10 +38,10 @@ RUN \
     && apt-get -y autoremove \
     && apt-get -y clean \
     \
-#    && rm -fr \
-#        /tmp/* \
-#        /var/{cache,log}/* \
-#        /var/lib/apt/lists/*
+    && rm -fr \
+        /tmp/* \
+        /var/{cache,log}/* \
+        /var/lib/apt/lists/*
 
 # Copy root filesystem
 COPY rootfs /
