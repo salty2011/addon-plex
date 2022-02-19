@@ -3,11 +3,11 @@
     "version": "2.5",
     "slug": "plex",
     "description": "Recorded media, live TV, online news, and podcasts ready to stream.",
-    "url": "https://github.com/dianlight/addon-plex",
+    "url": "https://github.com/salty2011/addon-plex",
     "webui": "http://[HOST]:[PORT:32400]/web",
     "startup": "services",
     "arch": ["aarch64", "amd64", "armv7", "i386"],
-    "image": "dianlight/{arch}-addon-plex",
+    "image": "salty2011/{arch}-addon-plex",
     "map": ["media:rw", "share:rw", "ssl"],
     "boot": "auto",
     "ports": {
