@@ -38,10 +38,10 @@ RUN \
     && apt-get -y autoremove \
     && apt-get -y clean \
     \
-    && rm -fr \
-        /tmp/* \
-        /var/{cache,log}/* \
-        /var/lib/apt/lists/*
+#    && rm -fr \
+#        /tmp/* \
+#        /var/{cache,log}/* \
+#        /var/lib/apt/lists/*
 
 # Copy root filesystem
 COPY rootfs /
